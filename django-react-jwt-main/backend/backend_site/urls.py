@@ -10,6 +10,8 @@ urlpatterns = [
     path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
     path('reset/password/confirm/<int:uid>/<str:token>', reset_password_confirm, name="password_reset_confirm"),
     path('dj-rest-auth/google/', GoogleLogin.as_view(), name='google_login'),
+    path('api/', include('expenses.urls')),
+    path('api/', include('accounts.urls')),
 ]
 
 # urlpatterns += [re_path(f'^.*', TemplateView.as_view(template_name = "index.html"))]

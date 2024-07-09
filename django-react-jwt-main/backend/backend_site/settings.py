@@ -198,11 +198,12 @@ EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 AUTH_USER_MODEL = "accounts.CustomUserModel"
 
 
-import environ
+# import environ
 
 env = environ.Env()
 environ.Env.read_env()  # Load the .env file
 
-SECRET_KEY = env("SECRET_KEY")
+# SECRET_KEY = env("SECRET_KEY")
 # EMAIL_HOST_USER = env("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD") 
+SECRET_KEY = 'omesecretvalue'

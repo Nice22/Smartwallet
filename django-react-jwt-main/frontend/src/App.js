@@ -11,6 +11,7 @@ import Layout from "./High Order Function/Layout";
 import "./css/main.css";
 import { Provider } from "react-redux";
 import Store from "./Store";
+import Dashboard from './Pages/Dashboard';
 
 const App = () => {
   return (
@@ -18,18 +19,19 @@ const App = () => {
       <Router>
         <Layout>
           <Routes>
-            <Route exact path="/" Component={Home}></Route>
-            <Route path="login/" Component={Login}></Route>
-            <Route path="signup/" Component={Signup}></Route>
-            <Route path="change/password/" Component={ChangePassword}></Route>
-            <Route path="reset/password/" Component={ResetPassword}></Route>
-            <Route path="dj-rest-auth/registration/account-confirm-email/:key/" Component={EmailVerification}></Route>
-            <Route path="reset/password/confirm/:uid/:token" Component={ResetPasswordConfirm}></Route>
+            <Route exact path="/" element={<Home />}></Route>
+            <Route path="login/" element={<Login />}></Route>
+            <Route path="signup/" element={<Signup />}></Route>
+            <Route path="change/password/" element={<ChangePassword />}></Route>
+            <Route path="reset/password/" element={<ResetPassword />}></Route>
+            <Route path="dj-rest-auth/registration/account-confirm-email/:key/" element={<EmailVerification />}></Route>
+            <Route path="reset/password/confirm/:uid/:token" element={<ResetPasswordConfirm />}></Route>
+            <Route path="dashboard/" element={<Dashboard />}></Route>
           </Routes>
         </Layout>
       </Router>
     </Provider>
-  )
-}
+  );
+};
 
-export default App
+export default App;

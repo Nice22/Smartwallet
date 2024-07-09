@@ -33,6 +33,9 @@ const Navbar = ({ logout, isAuthenticated }) => {
                         <li className="nav-item">
                         <Link className="nav-link active" aria-current="page" to="signup/">Signup</Link>
                         </li>
+                        <li className="nav-item">
+                        <Link className="nav-link active" aria-current="page" to="dashbord/">Dashbord</Link>
+                        </li>
                         </>
                     ) }
                     
